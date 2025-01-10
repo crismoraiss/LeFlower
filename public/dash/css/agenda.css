@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    /* max-width: 400px; */
+    /* margin: 0 auto; */
+    padding: 20px;
+    /* background-color: #fff; */
+    border-radius: 5px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    color: #e4b48d;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.4rem;
+    vertical-align: top;
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    /* outline: 1px solid #f1f6f8; */
+    border: 1px solid #f1f6f8;
+  }
+
+  input:hover,
+  input::after {
+    border: 1px solid #e4b48d;
+  }
+  .div-mae {
+    /* background: rgba(89, 132, 142, 0.952); */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 10px;
+  }
+  select {
+    padding: 0.4375rem 0.75rem;
+    border: 0;
+    outline: 1px solid #f1f6f8;
+    color: #c9c8c8;
+  }
+  agendar-btn {
+    background-color: #e4b48d;
+    font-size: 0.875rem;
+    line-height: 1;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  /* ESTILO CALENDARIO */
+  /* body{
+        padding: 0;
+        background-color: rgb(20,92,173);
+      } */
+
+  #form {
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    margin: 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  #form h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  input[type="date"] {
+    padding: 8px;
+    font-size: 15px;
+    text-align: center;
+    /* border-style: solid; */
+    /* box-shadow: 0 5px 5px rgba(0,0,0,0.3); */
+  }
+  ::-webkit-inner-spin-button {
+    display: none;
+  }
+  ::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  .mgCalendarioBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    z-index: 9999;
+  }
+
+  .data{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .mgCalendario {
+    position: relative;
+     /* position: fixed;  */
+    display: block;
+    top: 50%;
+     left: 50%;
+    left: 10%;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    margin: 0;
+    font-family: Verdana, Arial;
+    padding: 5px;
+    background-color: #fff;
+    /* transform: translate(-45%, 0%); */
+    transform: translate(-45%, -92%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+  }
+
+  .mgCalendario * {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mgCalendario table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+  }
+
+  .mgCalendario tbody:nth-child(1) td {
+    position: relative;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .mgCalendario tbody:nth-child(1) td:nth-child(1n) {
+    cursor: pointer;
+  }
+
+  .mgCalendario tbody:nth-child(1) td:nth-child(2) {
+    cursor: default;
+  }
+
+  .mgCalendario tbody:nth-child(2) td {
+    width: 14.2%;
+    padding: 10px 5px;
+    text-align: center;
+    cursor: default;
+  }
+
+  .mgCalendario tbody:nth-child(3) td {
+    height: 45px;
+    border: 0 none;
+    text-align: center;
+  }
+
+  .mgVazio {
+    background-color: #f3f3f3;
+    color: #aaa;
+  }
+
+  .mgDia {
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .mgDia:hover {
+    background-color: #59848e;
+    transform: scale(1.2, 1.2);
+    transition: transform 0.2s;
+  }
+
+  .mgDia:nth-child(6n + 1):hover {
+    background-color: #e4b48d;
+  }
+
+  .mgDiaHoje {
+    background-color: #e4b48d;
+  }
+
+  .mgDiaSelecionado {
+    background-color: #59848e;
+  }
+
+  .mgDiaPassado {
+    opacity: 0.5; /* Reduz a opacidade para indicar que o dia está desativado */
+  }
+
+
+  .mgCalendario > div button {
+    display: inline-block;
+    width: 33.33%;
+    height: 50px;
+    line-height: 50px;
+    margin: 6px 0;
+    font-size: 1.1em;
+    border: 0 none transparent;
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+  }
+
+  .mgCalendario > div button:hover {
+    background-color: #59848e;
+  }
+
+  .mgCalendario > div:nth-child(2) {
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .mgCalendario > div:nth-child(2) input[type="button"] {
+    width: 35%;
+    min-width: 110px;
+    padding: 10px;
+    margin: 5px 5%;
+    background-color: #59848e;
+    background-image: none;
+    text-shadow: none;
+    border: 0 none transparent;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .mgCalendario > div:nth-child(2) input[type="button"]:hover {
+    transform: scale(1.1, 1.1);
+    transition: transform 0.2s;
+  }
+
+  .mgCalendario > div:nth-child(2) input[type="button"]:focus {
+    outline: 0 none;
+  } /*# sourceMappingURL=style.css.map */

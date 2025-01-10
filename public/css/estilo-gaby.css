@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --theme-color: #fec195;
+    --title-color: #1c1c1c;
+    --body-color: #7b7e86;
+    --smoke-color: #f3f3f3;
+    --smoke-color2: #f6f6f7;
+    --smoke-color3: #f5f5f6;
+    --smoke-color4: #f4f4f4;
+    --smoke-color5: #f0f2f4;
+    --black-color: #202020;
+    --gray-color: #303030;
+    --white-color: #ffffff;
+    --light-color: #9fa2ad;
+    --yellow-color: #ffb539;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #e3e3e3;
+    --title-font: "Kanit", sans-serif;
+    --body-font: "Kumbh Sans", sans-serif;
+    --icon-font: "Font Awesome 6 Pro";
+    --minha-font1: "Lato", sans-serif;
+    
+    --minha-font2: "Montserrat", sans-serif;
+    --main-container: 1220px;
+    --container-gutters: 24px;
+    --section-space: 120px;
+    --section-space-mobile: 80px;
+    --section-title-space: 60px;
+    --ripple-ani-duration: 5s;
+
+    --azul-salao: #59848e;
+    --salmao-salao: #e4b48d;
+        border: 1px solid #59848e;
+}
+
+/* .cards-gaby{
+    display: flex;
+    justify-content: space-between;
+} */
+.about {
+    padding: 40px;
+    background-color: var(--azul-salao);
+}
+.div-about {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-text {
+    flex-direction: column;
+    width: 50%;
+    color: rgba(72, 201, 175, 0.411);
+}
+.about-text h1 {
+    color: var(--white-color);
+    font-family: var(--title-font);
+}
+.about-text p {
+    color: var(--white-color);
+    font-family: var(--body-font);
+}
+.letra-colorida {
+    color: var(--salmao-salao);
+    font-weight: bold;
+}
+.about-card {
+    width: 35%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD TESTE */
+.card {
+    position: relative;
+    width: 270px;
+    height: 250px;
+    background: mediumturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 15px 0 0 15px;
+}
+
+/*  */
+#card1 {
+    background-image: url("../img/flor1.png");
+    border-radius: 0 15px 15px 0;
+}
+#card1:hover:after {
+    content: "BELEZA";
+}
+
+#card2 {
+    background-image: url("../img/flor2.png");
+    border-radius: 0 15px 15px 0;
+}
+#card2:hover:after {
+    content: "QUE";
+}
+#card3 {
+    background-image: url("../img/flor3.png");
+    border-radius: 15px 0 0 15px;
+}
+#card3:hover:after {
+    content: "FLORESCE";
+}
+
+#card4 {
+    background-image: url("../img/flor4.png");
+    border-radius: 0 15px 15px 0;
+}
+#card4:hover:after {
+    content: "ELEGÂNCIA";
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--salmao-salao);
+    /* background-color: lightblue; */
+    transition: all 0.5s;
+}
+
+.card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card:hover::before,
+.card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+/* .card:hover:after {
+    content: "LEFLOWER";
+} */
+
+/* AJUSTES  */
+
+@media screen and (max-width: 1239px) {
+    #card3,
+    #card4 {
+        display: none;
+    }
+}
+@media screen and (min-width: 1240px) {
+    .about-text,
+    .about-card {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1134px) and (max-width: 1239px) {
+    .about-card {
+        width: 60%;
+        justify-content: center;
+    }
+    .card {
+        width: 240px;
+        height: 220px;
+    }
+}
+
+@media screen and (min-width: 909px) and (max-width: 1133px) {
+    .about-card {
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 40%;
+        /* width: 230px; */
+        /* height: 210px; */
+        height: 70%;
+    }
+}
+@media screen and (min-width: 813px) and (max-width: 910px) {
+    .about-card {
+        width: 60%;
+    }
+    .card {
+        width: 45%;
+        /* width: 230px; */
+        /* height: 210px; */
+        height: 60%;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 911px) {
+    .about-card {
+        width: 60%;
+    }
+    .card {
+        width: 45%;
+        height: 60%;
+    }
+}
+@media screen and (min-width: 764px) and (max-width: 812px) {
+    .about-card {
+        width: 60%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 60%;
+        height: 40%;
+    }
+}
+@media screen and (max-width: 763px) {
+    .div-about {
+        flex-direction: column;
+    }
+    .about-text {
+        width: 95%;
+    }
+    .about-text h1 {
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 20px;
+    }
+    .about-card {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .card {
+        width: 50%;
+    }
+}
+/* Adicione estas regras ao seu CSS */
+
+.leflower-text {
+    display: inline-block;
+    transition: color 1.5s ease; /* Ajuste a duração da transição conforme necessário */
+}
+
+.leflower-text:hover {
+    color: var(--salmao-salao);
+}
+
+.tetss:hover {
+    border-left: 30px solid lawngreen;
+}
+
+/* INSTAGRAM PHOTOS */
+.insta-photos {
+    background-color: var(--white-color);
+}
+/*
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77).
+The 'supports' rule will only run if your browser supports CSS grid.
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+    /* Base font size */
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Lato", sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    /* padding: 35px 0; */
+    padding-top: 38px;
+    /* color: #1a1a1a; */
+    color: var(--azul-salao);
+}
+.headingg {
+    line-height: 1.5;
+    text-align: center;
+    /* padding: 35px 0; */
+}
+
+
+.heading span {
+    display: block;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /* Compensate for excess margin on outer gallery flex items */
+    margin: -1rem -1rem;
+}
+
+.gallery-item {
+    /* Minimum width of 24rem and grow to fit available space */
+    flex: 1 0 24rem;
+    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+    margin: 1rem;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+
+}
+
+.gallery-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+    cursor: pointer;
+}
+.gallery-image:hover{
+    background: #28a745;
+}
+
+/* .gallery-image:hover {
+	transform: scale(1.15);
+} */
+/* .gallery-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+} */
+
+.gallery-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #59848e;
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 400ms ease-out;
+}
+
+.gallery-image:hover::before {
+    opacity: 0.5; /* Opacidade desejada ao passar o mouse */
+}
+
+.gallery-image:hover {
+    transform: scale(1.15);
+}
+.gallery-image:hover::after {
+    content: "@leflower";
+}
+
+/*
+The following rule will only run if your browser supports CSS grid.
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling.
+*/
+
+@supports (display: grid) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 1rem;
+    }
+
+    .gallery,
+    .gallery-item {
+        margin: 0;
+    }
+}
+
+/* TESTE BUTTON */
+.buttonGaleria {
+    position: relative;
+    width: 130px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px  var(--salmao-salao) solid;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .text1 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 22%;
+    color: var(--black-color);
+  }
+
+  .text2 {
+      position: absolute;
+      top:17%;
+      left: -90px;
+      font-weight: 600;
+      font-family: var(--minha-font2);
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: white;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+  }
+
+  .icon::before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 33px;
+    border-radius: 30px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    ;
+  }
+
+  .buttonGaleria:hover .icon {
+    transform: translateX(96px);
+    transition: transform 0.5s;
+  }
+
+  .buttonGaleria:hover .text2 {
+    transform: translateX(100px);
+    transition: transform 0.6s;
+  }
+
+  .buttonGaleria:active {
+    transform: scale(1.03);
+  }
+
+
+  /* CONTACT FORM */
+  .contact{
+    padding: 50px 20px;
+  }
+  .cont{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contai {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid #396afc;
+    background: linear-gradient(to right, #005c97, #363795);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .contai form .descr {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e8e8e8;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input, textarea {
+    margin: 1em 0 1em 0;
+    width: 300px;
+    position: relative;
+  }
+
+  .input input, textarea {
+    font-size: 100%;
+    padding: 0.7em;
+    outline: none;
+    color: #e8e8e8;
+    border: none;
+    border-bottom: 2px solid #e8e8e8;
+    background: transparent;
+    border-radius: none;
+    width: 100%;
+    resize: none;
+  }
+
+  .input label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    color: #e8e8e8;
+    padding: 0.7em;
+    margin-left: 0.1em;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+  }
+
+  .input :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+  }
+
+  .input textarea:focus ~ label,
+  .input textarea:valid ~ label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+  }
+
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(37, 37, 211);
+  }
+
+  .form .buttonGaleria {
+    color: #e8e8e8;
+    font-size: 15px;
+    align-self: flex-start;
+    padding: 0.6em;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .form button:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e8e8e8;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .form .buttonGaleria:hover:before {
+    opacity: 0.2;
+  }
+
+  .form .buttonGaleria:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+
+
+  .form-img{
+    width: 50%;
+  }
+
+
+
+

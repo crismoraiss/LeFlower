@@ -1,0 +1,85 @@
+.opening-hours {
+    padding: 80px 0;
+  }
+
+  .opening-hours .section-heading {
+    text-align: center;
+  }
+
+  .opening-hours .section-heading h2 {
+    font-size: 36px;
+    color: #333;
+  }
+
+  .opening-hours .line-dec {
+    width: 100px;
+    height: 3px;
+    background-color: #498594;
+    margin: 20px auto;
+  }
+
+  .opening-hours-box {
+    overflow: hidden;
+  }
+
+  .opening-hours-content {
+    display: flex;
+    animation: slideCards 10s linear infinite;
+  }
+
+  .opening-hour {
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #59848e;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .opening-hour h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .opening-hour p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #fff
+  }
+
+
+  /* Estilos responsivos */
+
+
+  @media screen and (max-width: 768px) {
+    .opening-hour {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .opening-hour {
+      width: calc(100% - 20px);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .opening-hour {
+      padding: 15px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .opening-hour h2 {
+      font-size: 18px;
+    }
+
+    .opening-hour p {
+      font-size: 14px;
+    }
+  }

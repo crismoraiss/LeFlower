@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "axios": "^1.1.2",
+    "laravel-vite-plugin": "^0.7.2",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "vite": "^4.0.0"
+  },
+  "name": "userservices",
+  "version": "1.0.0",
+  "description": "Serviço de Gerenciamento de Usuários",
+  "main": "index.js",
+  "keywords": [
+    "Users",
+    "Node",
+    "Express",
+    "MySQL"
+  ],
+  "author": "Edilson",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.1",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^8.2.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.3.3",
+    "nodemailer": "^6.9.4"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}

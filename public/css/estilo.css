@@ -1,0 +1,259 @@
+.sub-title {
+    display: inline-block;
+    line-height: 1.2;
+    color: var(--theme-color);
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    padding: 8px 20px 6px;
+    font-weight: 500;
+    font-family: var(--title-font);
+    margin-bottom: 26px;
+    letter-spacing: 0.05em;
+    background: var(--white-color);
+    box-shadow: 0px 8px 19px rgba(0, 0, 0, 0.07);
+    border-radius: 50px;
+  }
+  .sub-title.style2 {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-top: -0.2em;
+    display: block;
+  }
+
+  .team-card {
+    background: var(--smoke-color2);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.4s;
+    border: 1px solid transparent;
+    margin-bottom: 60px;
+  }
+  .team-card_img {
+    position: relative;
+    border-radius: 20px;
+  }
+  .team-card_img img {
+    border-radius: 20px;
+    width: 100%;
+  }
+  .team-card_content {
+    text-align: center;
+    position: relative;
+  }
+  .team-card_content .social-btn {
+    justify-content: center;
+    margin-top: 0px;
+    opacity: 0;
+    transition: 0.4s;
+    margin-bottom: -45px;
+  }
+  .team-card_title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: -0.2em;
+    margin-bottom: -5px;
+    margin-top: 23px;
+  }
+  .team-card_title a {
+    color: var(--title-color);
+  }
+  .team-card_title a:hover {
+    color: var(--theme-color);
+  }
+  .team-card_desig {
+    font-weight: 300;
+    font-size: 14px;
+    font-family: var(--title-font);
+    color: var(--body-color);
+  }
+  .team-card:hover {
+    background: var(--white-color);
+    box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(237, 237, 237, 0.89);
+    margin-bottom: 0;
+  }
+  .team-card:hover .team-card_content .social-btn {
+    margin-top: 15px;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+  .team-card.style2 {
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    position: relative;
+    margin-bottom: 0;
+  }
+  .team-card.style2 .team-card_img {
+    border-radius: 0;
+  }
+  .team-card.style2 .team-card_img img {
+    border-radius: 0;
+  }
+  .team-card.style2 .team-card_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+  }
+  .team-card.style2 .team-card_content .social-btn {
+    opacity: 1;
+    transform: none;
+    margin-bottom: 0;
+    justify-content: start;
+    gap: 5px;
+  }
+  .team-card.style2 .team-card_content .social-btn a {
+    border-radius: 0;
+  }
+  .team-card.style2 .team-card_title {
+    background: var(--white-color);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 14px 26px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .team-card.style2 .team-card_desig {
+    background: var(--theme-color);
+    display: inline-block;
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    padding: 5.5px 25px 3.5px;
+  }
+  .team-card.style2:hover {
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    margin-bottom: 0;
+  }
+  .team-card.style2:hover .team-card_content .social-btn {
+    margin-top: 0;
+  }
+  .team-card.style3 {
+    margin-bottom: 0px;
+    padding: 30px 30px 20px;
+  }
+  .team-card.style3 .team-card_img {
+    position: relative;
+  }
+  .team-card.style3 .team-card_img .social-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: 0.4s;
+  }
+  .team-card.style3:hover .social-btn {
+    opacity: 1;
+    transform: translate(-50%, -30px);
+  }
+
+  .team-slider-1 .slick-current .team-card {
+    background: var(--white-color);
+    box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(237, 237, 237, 0.89);
+    margin-bottom: 0;
+  }
+  .team-slider-1 .slick-current .team-card .team-card_content .social-btn {
+    margin-top: 15px;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+
+  .team-card2 {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .team-card2 .team-card_img {
+    flex: none;
+    border-radius: 50%;
+  }
+  .team-card2 .team-card_img img {
+    border-radius: 50%;
+  }
+  .team-card2 .team-card_content {
+    text-align: start;
+  }
+  .team-card2 .team-card_subtitle {
+    text-transform: uppercase;
+    color: var(--theme-color);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--title-font);
+  }
+  .team-card2 .team-card_title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .team-card2 .team-card_title a {
+    color: var(--white-color);
+    background-image: linear-gradient(to left, var(--white-color), var(--white-color));
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0 2px;
+  }
+  .team-card2 .team-card_title a:hover {
+    background-size: 100% 2px;
+  }
+  .team-card2 .link-btn {
+    color: var(--white-color);
+  }
+  .team-card2 .link-btn i {
+    transform: rotate(-25deg);
+    color: var(--theme-color);
+  }
+  .team-card2 .link-btn:before {
+    display: none;
+  }
+  .team-card2 .link-btn:hover {
+    color: var(--theme-color);
+  }
+  .team-card2.style2 {
+    background: var(--white-color);
+    border: 1px solid rgba(237, 237, 237, 0.89);
+    box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.07);
+    border-radius: 15px;
+    padding: 40px;
+    gap: 20px;
+  }
+  .team-card2.style2 .team-card_title {
+    margin-bottom: 3px;
+  }
+  .team-card2.style2 .team-card_title a {
+    color: var(--title-color);
+  }
+  .team-card2.style2 .team-card_title a:hover {
+    color: var(--theme-color);
+  }
+  .team-card2.style2 .team-card_link {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--title-font);
+    color: var(--title-color);
+  }
+  .team-card2.style2 .team-card_link i {
+    color: var(--theme-color);
+    transform: rotate(-25deg);
+    margin-right: 8px;
+  }
+  .team-card2.style2 .team-card_link:hover {
+    color: var(--theme-color);
+  }
+
+  .team-slider-2 {
+    margin-left: auto;
+    margin-right: -38px;
+    max-width: 100px;
+  }

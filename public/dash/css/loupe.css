@@ -1,0 +1,63 @@
+/* Esconde o cursor padrão e define um cursor personalizado */
+body.loupe-active {
+    cursor: none; /* Esconde o cursor padrão */
+}
+
+/* Estilos para a lupa circular */
+.loupe {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001; /* Garantir que a lupa esteja acima de outros elementos */
+}
+
+/* Estilos para o botão fixo */
+.fixed-button.lupa-button {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #59848e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 60px;
+    font-size: 16px; /* Tamanho da fonte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed-button.lupa-button .fas {
+    font-size: 16px; /* Tamanho do ícone ajustado para o círculo menor */
+    color: white; /* Cor do ícone */
+}
+
+/* Estilo para o conteúdo ampliado */
+.zoomed-content {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #ccc;
+    padding: 5px 10px; /* Ajuste do padding para reduzir o espaçamento */
+    z-index: 999;
+    pointer-events: none;
+    width: auto;
+    max-width: 400px;
+    max-height: 200px; /* Reduzir a altura máxima */
+    word-wrap: break-word;
+    display: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px; /* Ajustar bordas */
+    line-height: 1.2; /* Ajustar altura da linha para reduzir o espaço entre linhas */
+    box-sizing: border-box; /* Garantir que o padding seja incluído na largura e altura */
+}

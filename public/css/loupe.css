@@ -1,0 +1,61 @@
+/* Estilos para a lupa circular */
+.loupe {
+    position: absolute;
+    width: 50px; /* Metade do tamanho anterior */
+    height: 50px;
+    border: 2px solid #000;
+    background: rgba(255, 255, 255, 0.5);
+    display: none;
+    pointer-events: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para o botão fixo */
+.fixed-button.lupa-button {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #59848e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 60px;
+    font-size: 16px; /* Tamanho da fonte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed-button.lupa-button .fas {
+    font-size: 16px; /* Tamanho do ícone ajustado para o círculo menor */
+    color: white; /* Cor do ícone */
+}
+
+/* Estilo para o conteúdo pai */
+.content {
+    position: relative;
+    /* margin: 20px; */
+}
+
+/* Estilo para o conteúdo ampliado */
+.zoomed-content {
+    position: absolute;
+    /* background-color: rgba(190, 134, 134, 0.8); */
+    border: 1px solid #ffffff;
+    /* padding: 2px; */
+    z-index: 999;
+    pointer-events: none;
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
+    word-wrap: break-word;
+    display: none;
+    color: white;
+    font-size: 18px;
+}
