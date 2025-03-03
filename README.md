@@ -25,6 +25,6 @@ A plataforma conta com uma <strong>página web institucional</strong>, além de 
 
 ---
 
-<h2><strong><\></strong> Desenvolvimento</h2>
+<h2>🖥️ Desenvolvimento</h2>
 <p>Desenvolvido utilizando tecnologias modernas para front-end e back-end, garantindo uma experiência otimizada para clientes e administradores</p>
 
