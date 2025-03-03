@@ -4,14 +4,8 @@
 
 @section('conteudo')
 
-
-
     <div class="content">
         {{-- DIV PARA A ACESSIBILIDADE --}}
-
-
-
-
         {{-- <div class="content"> --}}
         {{-- DIV PARA A ACESSIBILIDADE --}}
 
@@ -50,10 +44,9 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
 
-
-
         <!-- CSS da Lupa -->
         {{-- <link rel="stylesheet" href="{{ asset('css/loupe.css') }}"> --}}
+
         <style>
             .h3-gaby {
                 /* font-family: var(--minha-font2); */
@@ -100,8 +93,6 @@
                 background-color: #59848e;
             }
 
-
-
             @-webkit-keyframes pulse {
                 0% {
                     -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
@@ -133,7 +124,6 @@
                 }
 
             }
-
             .fundo {
                 display: flex;
                 flex-direction: column;
@@ -147,25 +137,21 @@
                 text-align: justify !important;
                 width: 60%;
                 line-height: 1.6;
-
             }
-
             .titlee {
                 margin-bottom: 10px;
                 color: #e4b48d;
                 font-size: 30px !important;
                 font-weight: bold;
+                text-align: center
             }
-
             .parallax {
                 height: 400px;
                 /* Altura da área de visualização */
                 overflow: hidden;
                 position: relative;
             }
-
             .parallax-image {
-
                 color: #ffffff;
                 background: url(assets/saalaoinicioo.jpeg);
                 background-size: cover;
@@ -173,9 +159,7 @@
                 background-attachment: fixed;
                 min-height: 700px;
             }
-
             .parallax-image2 {
-
                 color: #ffffff;
                 background: url(assets/salao1.jpg);
                 background-size: cover;
@@ -183,8 +167,6 @@
                 background-attachment: fixed;
                 min-height: 700px;
             }
-
-
             .parallax-image3 {
 
                 color: #ffffff;
@@ -194,9 +176,7 @@
                 background-attachment: fixed;
                 min-height: 700px;
             }
-
             .parallax-image4 {
-
                 color: #ffffff;
                 background: url(assets/salaoatualsobre.jpeg);
                 background-size: cover;
@@ -204,20 +184,14 @@
                 background-attachment: fixed;
                 min-height: 700px;
             }
-
             .parallax-image5 {
-
                 color: #ffffff;
-                background: url(assets/florAleatoria.jpeg);
+                background: url(assets/salao-atual.jpeg);
                 background-size: cover;
                 background-position: center;
                 background-attachment: fixed;
                 min-height: 700px;
             }
-
-
-
-
             .parallax-image::after {
                 content: "";
                 /* Criar um pseudo-elemento para a sobreposição */
@@ -229,7 +203,6 @@
                 background-color: rgba(0, 0, 0, 0.5);
                 /* Cor preta com 50% de opacidade */
             }
-
             .parallax-image2::after {
                 content: "";
                 /* Criar um pseudo-elemento para a sobreposição */
@@ -241,7 +214,6 @@
                 background-color: rgba(0, 0, 0, 0.5);
                 /* Cor preta com 50% de opacidade */
             }
-
             .parallax-image3::after {
                 content: "";
                 /* Criar um pseudo-elemento para a sobreposição */
@@ -253,7 +225,6 @@
                 background-color: rgba(0, 0, 0, 0.5);
                 /* Cor preta com 50% de opacidade */
             }
-
             .parallax-image4::after {
                 content: "";
                 /* Criar um pseudo-elemento para a sobreposição */
@@ -265,7 +236,6 @@
                 background-color: rgba(0, 0, 0, 0.5);
                 /* Cor preta com 50% de opacidade */
             }
-
             .parallax-image5::after {
                 content: "";
                 /* Criar um pseudo-elemento para a sobreposição */
@@ -276,16 +246,12 @@
                 height: 100%;
                 /* Cor preta com 50% de opacidade */
             }
-
-
             .content {
                 /* Estilos para o conteúdo abaixo da imagem */
             }
-
             .logoVideo {
                 display: none !important
             }
-
             @media (max-width: 700px) {
 
                 .col-auto {
@@ -298,7 +264,6 @@
                     width: 75% !important;
                 }
             }
-
             /* ESTILIZAÇÕES HEADER RESPONSIVEL */
             @media screen and (max-width: 700px) {
                 .banner {
@@ -306,18 +271,13 @@
                     content: url('../assets/logo-sobre.png');
                     width: 70% !important
                 }
-
-
             }
-
             @media screen and (max-width: 600px) {
                 .texto {
-                    text-align: center !important;
+                    text-align: justify !important;
                     width: 100%;
                 }
             }
-
-
             .parallax1 {
                 height: 50px;
                 /* Altura da área de visualização */
@@ -325,13 +285,8 @@
                 position: relative;
             }
         </style>
-
-
-
-
-
-
         {{-- Back --}}
+
     @section('logo')
         <a href="/"><img style="width:50%;" class="banner" src="{{ asset('assets/logo4.png') }}" alt="logo"></a>
     @endsection
@@ -362,8 +317,6 @@
         </div>
     </div>
 
-
-
     <div>
         <div class="fundo">
             <h4 class="titlee">
@@ -391,20 +344,15 @@
             </p>
 
             <div>
-                <img class="pulse" src="{{ asset('assets/img-gaby/flor3.svg') }}" alt="Esta imagem mostra o interior de um salão de beleza. Há três cadeiras de cabeleireiro pretas dispostas na frente de espelhos altos com molduras brancas decorativas. À esquerda, há uma estante branca cheia de produtos de cabelo, como sprays, shampoos e condicionadores. A parede ao fundo é dividida em duas cores, com uma seção rosa e outra cinza escura. Há um relógio de parede redondo na seção rosa.">
+                <img class="pulse" src="{{ asset('assets/img-gaby/flor3.svg') }}"
+                    alt="Esta imagem mostra o interior de um salão de beleza. Há três cadeiras de cabeleireiro pretas dispostas na frente de espelhos altos com molduras brancas decorativas. À esquerda, há uma estante branca cheia de produtos de cabelo, como sprays, shampoos e condicionadores. A parede ao fundo é dividida em duas cores, com uma seção rosa e outra cinza escura. Há um relógio de parede redondo na seção rosa.">
             </div>
         </div><!--/.timeline-content-->
     </div><!--/.timeline-->
 
-
-
-
     <div class="parallax">
         <div class="parallax-image"></div>
     </div>
-
-
-
 
     <div class="fundo">
         <h4 class="titlee">
@@ -429,12 +377,9 @@
     </div><!--/.timeline-content-->
     {{-- </div><!--/.timeline--> --}}
 
-
-
     <div class="parallax">
         <div class="parallax-image2"></div>
     </div>
-
 
     <div class="fundo">
         <h4 class="titlee">
@@ -462,130 +407,110 @@
             <img class="pulse" src="{{ asset('assets/img-gaby/flor3.svg') }}" alt="">
         </div>
     </div><!--/.timeline-content-->
-
-
-
-
-<div class="parallax">
-    <div class="parallax-image3"></div>
-</div>
-
-
-
-
-
-<div class="fundo">
-    <h4 class="titlee">
-        Comunidade e Reconhecimento
-    </h4>
-
-    <p class="texto">
-        Além de seu compromisso com a excelência na beleza, o Le Flower também se envolveu ativamente com a comunidade
-        local. Eles organizaram desfiles de moda, workshops de maquiagem e eventos de caridade, demonstrando seu apoio e
-        compromisso com as causas locais.
-        O salão também destacou artistas locais, exibindo suas obras nas paredes do salão. Essa conexão com a comunidade
-        não passou despercebida pela indústria da beleza, e o Le Flower foi reconhecido com vários prêmios,
-        solidificando
-        seu lugar como um ícone na cena da beleza.
-    </p>
-
-    <div>
-        <img class="pulse" src="{{ asset('assets/img-gaby/flor3.svg') }}" alt="">
+    <div class="parallax">
+        <div class="parallax-image3"></div>
     </div>
-</div><!--/.timeline-content-->
+
+    <div class="fundo">
+        <h4 class="titlee">
+            Comunidade e Reconhecimento
+        </h4>
+
+        <p class="texto">
+            Além de seu compromisso com a excelência na beleza, o Le Flower também se envolveu ativamente com a
+            comunidade
+            local. Eles organizaram desfiles de moda, workshops de maquiagem e eventos de caridade, demonstrando seu
+            apoio e
+            compromisso com as causas locais.
+            O salão também destacou artistas locais, exibindo suas obras nas paredes do salão. Essa conexão com a
+            comunidade
+            não passou despercebida pela indústria da beleza, e o Le Flower foi reconhecido com vários prêmios,
+            solidificando
+            seu lugar como um ícone na cena da beleza.
+        </p>
+
+        <div>
+            <img class="pulse" src="{{ asset('assets/img-gaby/flor3.svg') }}" alt="">
+        </div>
+    </div><!--/.timeline-content-->
 
 
-<div class="parallax">
-    <div class="parallax-image4"></div>
-</div>
-
-
-
-<div class="fundo">
-    <h4 class="titlee">
-        O Legado Continua
-    </h4>
-
-    <p class="texto">
-        Ao longo dos anos, o Le Flower se estabeleceu como um destino de beleza icônico. Continuaram a inovar e inspirar,
-        oferecendo a seus clientes experiências excepcionais e fortalecendo a autoconfiança por meio do poder da beleza.
-        O legado do Le Fleur continua a prosperar, deixando uma marca indelével na indústria da beleza e na comunidade
-        que eles tão amorosamente servem. Com cada cliente que sai por suas portas sentindo-se rejuvenescido e mais
-        confiante, o Le Fleur reafirma seu compromisso não apenas com a estética, mas também com o bem-estar emocional
-        de seus clientes. Seja através de um novo corte de cabelo, uma maquiagem impecável ou um tratamento de spa
-        relaxante, o Le Fleur não apenas transforma a aparência física, mas também eleva o espírito de quem os visita. É
-        essa dedicação incansável à excelência e ao serviço ao cliente que mantém o Le Fleur na vanguarda da indústria
-        da beleza, continuando a ser um farol de inspiração e beleza para todos aqueles que têm o privilégio de cruzar
-        seu caminho.
-    </p>
-
-    <div>
-        <img class="pulse" src="{{ asset('assets/img-gaby/flor3.svg') }}" alt="">
+    <div class="parallax">
+        <div class="parallax-image4"></div>
     </div>
-</div><!--/.timeline-content-->
 
+    <div class="fundo">
+        <h4 class="titlee">
+            O Legado Continua
+        </h4>
+        <p class="texto">
+            Ao longo dos anos, o Le Flower se estabeleceu como um destino de beleza icônico. Continuaram a inovar e
+            inspirar,
+            oferecendo a seus clientes experiências excepcionais e fortalecendo a autoconfiança por meio do poder da
+            beleza.
+            O legado do Le Fleur continua a prosperar, deixando uma marca indelével na indústria da beleza e na
+            comunidade
+            que eles tão amorosamente servem. Com cada cliente que sai por suas portas sentindo-se rejuvenescido e mais
+            confiante, o Le Fleur reafirma seu compromisso não apenas com a estética, mas também com o bem-estar
+            emocional
+            de seus clientes. Seja através de um novo corte de cabelo, uma maquiagem impecável ou um tratamento de spa
+            relaxante, o Le Fleur não apenas transforma a aparência física, mas também eleva o espírito de quem os
+            visita. É
+            essa dedicação incansável à excelência e ao serviço ao cliente que mantém o Le Fleur na vanguarda da
+            indústria
+            da beleza, continuando a ser um farol de inspiração e beleza para todos aqueles que têm o privilégio de
+            cruzar
+            seu caminho.
+        </p>
 
-{{-- <div class="parallax1">
+        <div>
+            <img class="pulse" src="{{ asset('assets/img-gaby/flor3.svg') }}" alt="">
+        </div>
+    </div><!--/.timeline-content-->
+
+    {{-- <div class="parallax1">
     <div class="parallax-image5"></div>
 </div> --}}
 
-<div class="parallax">
-    <div class="parallax-image5"></div>
-</div>
+    <div class="parallax">
+        <div class="parallax-image5"></div>
+    </div>
+    </section>
 
 
+    {{-- Teste fonts --}}
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!--bootstrap.min.js-->
+    <script src="{{ asset('icon/js/bootstrap.min.js') }}"></script>
+
+    <!-- bootsnav js -->
+    <script src="{{ asset('icon/js/bootsnav.js') }}"></script>
+
+    <!-- jquery.sticky.js -->
+    <script src="{{ asset('icon/js/jquery.sticky.js') }}"></script>
+
+    <!-- for progress bar start-->
+
+    <!-- progressbar js -->
+    <script src="{{ asset('icon/js/progressbar.js') }}"></script>
+    <!-- appear js -->
+
+    <!-- progressbar js -->
+    <script src="{{ asset('assets/js/script.js') }}"></script>
+    <!-- appear js -->
+
+    {{-- Começo scripts gaby --}}
+    <!-- DEPENDENCIA jQuery 3.6.0 COontador JORNADA -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-
-</section>
-
-
-
-
-
-
-
-
-{{-- Teste fonts --}}
-<!--modernizr.min.js-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-<!--bootstrap.min.js-->
-<script src="{{ asset('icon/js/bootstrap.min.js') }}"></script>
-
-<!-- bootsnav js -->
-<script src="{{ asset('icon/js/bootsnav.js') }}"></script>
-
-<!-- jquery.sticky.js -->
-<script src="{{ asset('icon/js/jquery.sticky.js') }}"></script>
-
-<!-- for progress bar start-->
-
-<!-- progressbar js -->
-<script src="{{ asset('icon/js/progressbar.js') }}"></script>
-<!-- appear js -->
-
-<!-- progressbar js -->
-<script src="{{ asset('assets/js/script.js') }}"></script>
-<!-- appear js -->
-
-{{-- Começo scripts gaby --}}
-<!-- DEPENDENCIA jQuery 3.6.0 COontador JORNADA -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-{{-- acs --}}
-{{-- @component('components.loupe') @endcomponent --}}
-
-
-
-
-
-{{-- acs --}}
+    {{-- acs --}}
+    {{-- @component('components.loupe') @endcomponent --}}
+    {{-- acs --}}
 </div>
 
 @component('components.loupe')
 @endcomponent
-
-
 @endsection

@@ -4,11 +4,6 @@
 
 @section('dash-cliente')
 
-
-<div class="content">
-    {{-- DIV PARA A ACESSIBILIDADE --}}
-
-
     <head>
         <title>Agendamento de Horários</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -625,6 +620,8 @@
     </head>
 
     <body>
+        <div class="content">
+            {{-- DIV PARA A ACESSIBILIDADE --}}
         <div class="container">
             <h1>Agendamento</h1>
             <form id="agendamentoForm" action="{{ route('agendar') }}" method="POST">
@@ -924,15 +921,11 @@
                 });
             });
         </script>
+ <div>
 
-
+ </div>
     </body>
 
-
-{{-- acs --}}
-</div>
-
-@component('components.loupe') @endcomponent
-
-
+    @component('components.loupe')
+    @endcomponent
 @endsection

@@ -32,6 +32,7 @@ Route::middleware(['auth:sanctum', 'cliente'])->group(function () {
     Route::get('/agendamento/servicos', [AgendamentoController::class, 'listarServicos']);
     Route::get('/agendamento/horarios', [AgendamentoController::class, 'listarHorarios']);
     Route::put('/agendamento/{id}', [AgendamentoController::class, 'confirmar']);
+    Route::get('cliente/agendamentos/{id}', [ClienteController::class, 'getAgendamentos']);
+    Route::put('/agendamentos/{id}/confirmar', [AgendamentoController::class, 'confirmarAgendamento'])->name('agendamentos.confirmarAgendamento');
+    Route::put('/agendamentos/{id}/cancelar', [AgendamentoController::class, 'cancelarAgendamento'])->name('agendamentos.cancelarAgendamento');
 });
-
-

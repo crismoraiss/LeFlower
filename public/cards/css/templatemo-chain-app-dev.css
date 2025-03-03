@@ -1754,9 +1754,9 @@ PopUp
   background: #FFF;
 }
 
-.btn {
+/* .btn {
   padding: 10px 20px;
-  background: #59848e;
+  /* background: #59848e;
   color: #fff;
   transition: all .3s;
 }
@@ -1783,7 +1783,7 @@ a.btn {
 
 a.btn_red {
   color: #FFF;
-}
+} */
 
 .one_half {
   width: 50%;

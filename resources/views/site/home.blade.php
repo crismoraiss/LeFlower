@@ -2,19 +2,14 @@
 
 @section('title', 'Home - Le Flower')
 
-
 @section('logo')
     <a href="/"><img style="width:50%;" class="banner" src="{{ asset('assets/logo4.png') }}" alt="logo"></a>
 @endsection
 
 @section('conteudo')
 
-
     <div class="content">
         {{-- DIV PARA A ACESSIBILIDADE --}}
-
-
-
         <div style="" class="hero-wrapper hero-2" id="hero">
             <div class="global-carousel" id="heroSlider2" data-fade="true" data-slide-show="1" data-lg-slide-show="1"
                 data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="true"
@@ -101,13 +96,12 @@
         </div>
 
         {{-- ESTILIZAÇÃO MOBILE BANNER HOME --}}
-        <Style>
+        <style>
             @media (max-width: 700px) {
                 .hero-slider {
                     height: 550px;
-                    background: url('assets/banner/bannerRespons.jpeg');
+                    background: url('{{ asset('assets/banner/bannerRespons.jpeg') }}');
                     background-size: cover;
-
                 }
 
                 .banner {
@@ -119,11 +113,8 @@
                     justify-content: end;
                     display: flex;
                 }
-
             }
-        </Style>
-
-
+        </style>
         {{-- ABOUT GABY --}}
         <div class="responsive-container-block bigContainer" data-aos="fade-down" style="background: #59848e ">
             <div class="responsive-container-block Container bottomContainer">
@@ -154,20 +145,18 @@
                         Leflower como mais do que um salão de beleza comum, mas como um espaço que abraça a singularidade de
                         cada indivíduo.
                     </p>
-                    <a href="/sobre">
+                    <a href="{{ route('sobre') }}">
                         <button class="cta">
                             <svg width="15px" height="10px" viewBox="0 0 13 10">
                                 <path d="M1,5 L11,5"></path>
                                 <polyline points="8 1 12 5 8 9"></polyline>
                             </svg>
                             <span>Leia mais</span>
-
                         </button>
                     </a>
                 </div>
             </div>
         </div>
-
 
         {{-- Perguntas frequentes --}}
         {{-- <section class="margin" data-aos="fade-up">  Com animação (Quebra) --}}
@@ -194,9 +183,6 @@
                     </div>
                 </div>
 
-
-
-
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
@@ -215,8 +201,6 @@
                         padding: 0 0 50px 10px
                     }
 
-
-
                     .containerr h1 {
                         font-size: 25px;
                         color: var(--salmao-salao);
@@ -226,7 +210,6 @@
                     }
 
                     /* Estilos para dispositivos não responsivos */
-
 
                     .accordion {
                         width: 100%;
@@ -239,7 +222,6 @@
                         align-items: center;
                         padding: 10px;
                         border-radius: 30px;
-
                     }
 
                     .accordion i {
@@ -393,10 +375,7 @@
                     </div>
                 </div>
 
-
-
                 {{-- SCRIPT  ACORDION --}}
-
         </section>
 
         <style>
@@ -522,7 +501,7 @@
                 <div class="carousel-item active">
                     <div class="my-depoimento-container">
                         <div class="my-depoimento">
-                            <img src="{{ asset('assets/depo6.png') }}" alt="Imagem do Autor">
+                            <img src="{{ asset('assets/img/depo6.jpeg') }}" alt="Imagem do Autor">
                             <div class="conteudo">
                                 <p class="data">18 de maio de 2024</p>
                                 <p class="texto">Estou muito feliz com o serviço deste salão. Profissionalismo desde a
@@ -537,7 +516,7 @@
                 <div class="carousel-item">
                     <div class="my-depoimento-container">
                         <div class="my-depoimento">
-                            <img src="{{ asset('assets/depo7.png') }}" alt="Imagem do Autor">
+                            <img src="{{ asset('assets/img/depo7.jpeg') }}" alt="Imagem do Autor">
                             <div class="conteudo">
                                 <p class="data">22 de abril de 2024</p>
                                 <p class="texto">Este salão é incrível! Descobri através de uma amiga e estou encantada.
@@ -552,7 +531,7 @@
                 <div class="carousel-item">
                     <div class="my-depoimento-container">
                         <div class="my-depoimento">
-                            <img src="{{ asset('assets/depo8.png') }}" alt="Imagem do Autor">
+                            <img src="{{ asset('assets/img/depo8.jpeg') }}" alt="Imagem do Autor">
                             <div class="conteudo">
                                 <p class="data">22 de janeiro de 2024</p>
                                 <p class="texto">Serviço de alta qualidade! O estilista captou perfeitamente o que eu
@@ -664,7 +643,6 @@
                 text-align: center;
             }
 
-
             .service img {
                 width: 100%;
                 height: auto;
@@ -695,11 +673,9 @@
 
             .service h4 {
                 color: #202020;
-
-
             }
 
-            . .service-description {
+            .service-description {
                 color: gainsboro;
                 text-align: start;
             }
@@ -707,7 +683,6 @@
             .test-bg {
                 background-position: center;
                 background: linear-gradient(180deg, rgba(89, 132, 142, 0.23), rgba(89, 132, 142, 0.23)), url({{ asset('assets/AdobeStock_587067399.jpeg') }});
-
             }
 
             .servico {
@@ -745,10 +720,6 @@
             .buttonAgendar3 {
                 margin-right: 70%;
             }
-
-
-
-
 
             @media (max-width: 700px) {
                 .about-thumb-2 img {
@@ -797,11 +768,9 @@
                     display: block;
                     margin-bottom: 250px;
                 }
-
             }
 
             @media (min-width: 701px) and (max-width:1354px) {
-
                 .about-thumb-2 img {
                     display: none;
                 }
@@ -834,13 +803,11 @@
                 .buttonAgendar2 {
                     margin-left: 0%;
                     margin-left: 3%;
-
                 }
 
                 .buttonAgendar3 {
                     margin-right: 0%;
                     margin-left: 3.5%;
-
                 }
 
                 .container1 {
@@ -873,10 +840,6 @@
                     flex: 0 0 50%;
                     max-width: 100%;
                 }
-
-
-
-
             }
 
             .about-thumb-num {
@@ -925,66 +888,65 @@
 
                 <div class="gallery">
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/nail.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/nail.png') }}"
                             alt="Close-up de mãos femininas com unhas pintadas em estilo ombré rosa e branco, segurando uma folha verde.">
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/men-corte.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/men-corte.png') }}"
                             alt="Um barbeiro com cabelo curto e barba aparada está cortando o cabelo de um cliente que está sentado em uma cadeira de barbeiro. Ambos estão em um ambiente de barbearia moderna.">
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/hair-clear.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/hair-clear.png') }}"
                             alt="Uma mulher com cabelo molhado está recebendo uma lavagem de cabelo em uma pia de salão. Ela está reclinada com os olhos fechados, e a água está correndo sobre seu cabelo.">
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/makeup.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/makeup.png') }}"
                             alt="Uma maquiadora está aplicando maquiagem nos olhos de uma mulher jovem que está de olhos fechados. Ambas estão em um ambiente bem iluminado, típico de um salão de beleza.">
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/skin-men.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/skin-men.png') }}"
                             alt="Um homem está recebendo um tratamento facial. Ele está deitado, com uma máscara facial cinza sendo aplicada em seu rosto por uma esteticista.">
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/men.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/men.png') }}"
                             alt="Um barbeiro está aparando o cabelo de um homem com barba cheia. O homem está sentado em uma cadeira de barbeiro, olhando para frente.">
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/hair-2.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/hair-2.png') }}"
                             alt="Close-up da parte de trás da cabeça de uma mulher com cabelo longo e ondulado, enquanto ela está tendo seu cabelo estilizado por um cabeleireiro.">
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/nail-make.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/nail-make.png') }}"
                             alt="Close-up de uma esteticista utilizando luvas roxas e um equipamento de manicure para tratar as unhas de um cliente.">
                     </div>
 
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/pintura-hair.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/pintura-hair.png') }}"
                             alt="Uma mulher com cabelo loiro está em um salão de beleza, com uma capa protetora, enquanto seu cabelo está sendo tingido.">
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/sombra.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/sombra.png') }}"
                             alt="Close-up do rosto de uma mulher enquanto ela está tendo suas sobrancelhas cuidadosamente depiladas com uma pinça por uma esteticista usando luvas brancas.">
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/hair2.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/hair2.png') }}"
                             alt="Um cabeleireiro está secando o cabelo de uma cliente com um secador de cabelo. A cliente está sentada e o cabeleireiro está focado no trabalho.">
                     </div>
                     <div class="gallery-item">
-                        <img class="gallery-image" src="../assets/img/depi.png"
+                        <img class="gallery-image" src="{{ asset('assets/img/depi.png') }}"
                             alt="Close-up de uma esteticista usando luvas pretas aplicando cera quente dourada em um cliente para depilação.">
                     </div>
                 </div>
+
             </div>
         </section>
-
-
 
         {{-- SCRIPT PARA A ANIMAÇÃO DO FAC SAIR QUANDO A TELA FOR MENOR QUE 700PX, REMOVENDO O ATRIBUTO data-aos DAS SEÇÃO/DIV, ASSIM EVITA QUEBRAR NO MOBILE --}}
         <script>
@@ -1005,7 +967,7 @@
                 if (screenWidth < maxWidth) {
                     // Remove o atributo data-aos de todas as divs com a classe accordion
                     var accordions = document.querySelectorAll('.accordion');
-                    accordions.forEach(function(accordion) {
+                    accordions.forEach(function (accordion) {
                         accordion.removeAttribute('data-aos');
                     });
 
@@ -1025,7 +987,7 @@
             var i;
             var len = acordion.length;
             for (i = 0; i < len; i++) {
-                acordion[i].addEventListener('click', function() {
+                acordion[i].addEventListener('click', function () {
                     this.classList.toggle('active');
                     var panal = this.nextElementSibling;
                     if (panal.style.maxHeight) {
@@ -1036,13 +998,9 @@
                 })
             }
         </script>
-
-
-        {{-- acs --}}
     </div>
 
     @component('components.loupe')
     @endcomponent
-
 
 @endsection

@@ -182,7 +182,7 @@ class AgendamentoController extends Controller
             return response()->json($agendamento, 201);
         }
 
-        return redirect()->route('dashboard.cliente')->with('success', 'Agendamento criado com sucesso e email enviado.');
+        return redirect()->route('dashboard.meusagenda')->with('success', 'Agendamento criado com sucesso e email enviado.');
     }
 
 
@@ -208,26 +208,49 @@ class AgendamentoController extends Controller
         }
     }
 
-    public function confirmarAgendamento($id)
+    public function confirmarAgendamento(Request $request, $id)
     {
         $agendamento = Agendamento::find($id);
         if ($agendamento) {
             $agendamento->statusAgendamento = 'confirmado';
             $agendamento->save();
+
+            if ($request->wantsJson()) {
+                return response()->json(['success' => 'Agendamento confirmado com sucesso'], 200);
+            }
+
             return redirect()->back()->with('success', 'Agendamento confirmado com sucesso');
         }
+
+        if ($request->wantsJson()) {
+            return response()->json(['error' => 'Agendamento não encontrado'], 404);
+        }
+
         return redirect()->back()->with('error', 'Agendamento não encontrado');
     }
-    public function cancelarAgendamento($id)
+
+    public function cancelarAgendamento(Request $request, $id)
     {
         $agendamento = Agendamento::find($id);
         if ($agendamento) {
             $agendamento->statusAgendamento = 'cancelado';
             $agendamento->save();
+
+            if ($request->wantsJson()) {
+                return response()->json(['success' => 'Agendamento cancelado com sucesso'], 200);
+            }
+
             return redirect()->back()->with('success', 'Agendamento cancelado com sucesso');
         }
+
+        if ($request->wantsJson()) {
+            return response()->json(['error' => 'Agendamento não encontrado'], 404);
+        }
+
         return redirect()->back()->with('error', 'Agendamento não encontrado');
     }
+
+
 }
 
 

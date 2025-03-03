@@ -5,20 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <title>@yield('title', 'Título Padrão')</title> --}}
-    <link rel="shortcut icon" type="image/png" href="{{ asset('dash/images/logos/favicon.png') }}" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
+    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/logo.png') }}" />
     <link rel="stylesheet" href="{{ asset('dash/css/styles.min.css') }}" />
 
-      <!-- CSS da Lupa -->
-      <link rel="stylesheet" href="{{ asset('dash/css/loupe.css') }}">
+    {{-- Icone Lupa --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <!-- CSS da Lupa -->
+    <link rel="stylesheet" href="{{ asset('dash/css/lupa.css') }}">
 </head>
 
 {{-- <body> --}}
-{{-- PEQUENOS AJUSTES NO DASH --}}
 <style>
     .sidebar-nav ul .sidebar-item .sidebar-link,
     .nav-small-cap {
@@ -70,6 +67,8 @@
         --bs-gradient: none
     }
 </style>
+
+<!--  Body CLIENTE -->
 @if (session('tipoUsuario_type') == 'cliente')
     <title>Cliente - Le Flower</title>
     <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
@@ -177,7 +176,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ asset('assets/img-user/' . $cliente->fotoCliente) }}" alt=""
+                                    <img src="{{ asset('assets/img-client/' . $cliente->fotoCliente) }}" alt=""
                                         width="35" height="35" class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
@@ -216,29 +215,30 @@
 @elseif(session('nivelFuncionario') == 'Administrador')
     <title>Administrador - Le Flower</title>
     <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6"
-    data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
-    <!-- Sidebar Start -->
-    <aside class="left-sidebar" style="background-color: #59848e">
-        <!-- Sidebar scroll-->
-        <div>
-            <div class="brand-logo d-flex align-items-center justify-content-between flex-direction"
-            style="flex-direction: column; min-height: 120px;  padding: 10px 24px;"
-            style="flex-direction: column; min-height: 105px;">
-            <a href="./index.html" class="text-nowrap logo-img">
-                <img src="{{ asset('dash/images/logos/logo2.png') }}" width="100" alt="" />
-            </a>
-            <h2 style="color: #fff; font-size: 1.50rem; text-align: center; text-transform: capitalize; margin-top: 23px">
-                Administradora<br>
-                @if(isset($func))
-                    {{ $func->nomeFuncionario }}
-                @else
-                    Nome não disponível
-                @endif
-            </h2>
-            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-                <i class="ti ti-x fs-8"></i>
-            </div>
-        </div>
+        data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <aside class="left-sidebar" style="background-color: #59848e">
+            <!-- Sidebar scroll-->
+            <div>
+                <div class="brand-logo d-flex align-items-center justify-content-between flex-direction"
+                    style="flex-direction: column; min-height: 120px;  padding: 10px 24px;"
+                    style="flex-direction: column; min-height: 105px;">
+                    <a href="./index.html" class="text-nowrap logo-img">
+                        <img src="{{ asset('dash/images/logos/logo2.png') }}" width="100" alt="" />
+                    </a>
+                    <h2
+                        style="color: #fff; font-size: 1.50rem; text-align: center; text-transform: capitalize; margin-top: 23px">
+                        Administradora<br>
+                        @if (isset($func))
+                            {{ $func->nomeFuncionario }}
+                        @else
+                            Nome não disponível
+                        @endif
+                    </h2>
+                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                        <i class="ti ti-x fs-8"></i>
+                    </div>
+                </div>
 
                 {{-- dash da cris --}}
                 <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
@@ -296,7 +296,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link"  href="{{ route('dashboard.admin.func.criar') }}">
+                            <a class="sidebar-link" href="{{ route('dashboard.admin.func.criar') }}">
                                 <span>
                                     <i class="ti ti-user-plus"></i>
                                 </span>
@@ -347,10 +347,10 @@
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ asset('assets/img-user/' . $func->fotoFuncionario) }}" alt=""
-                                    width="35" height="35" class="rounded-circle">
-                            </a>
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="{{ asset('assets/img-user/' . $func->fotoFuncionario) }}"
+                                        alt="" width="35" height="35" class="rounded-circle">
+                                </a>
 
 
 
@@ -405,23 +405,24 @@
 
                     {{-- dash cris  --}}
                     <div class="brand-logo d-flex align-items-center justify-content-between flex-direction"
-                    style="flex-direction: column; min-height: 120px;  padding: 10px 24px;"
-                    style="flex-direction: column; min-height: 105px;">
-                    <a href="./index.html" class="text-nowrap logo-img">
-                        <img src="{{ asset('dash/images/logos/logo2.png') }}" width="100" alt="" />
-                    </a>
-                    <h2 style="color: #fff; font-size: 1.50rem; text-align: center; text-transform: capitalize; margin-top: 23px">
-                       Funcionário<br>
-                        @if(isset($func))
-                            {{ $func->nomeFuncionario }}
-                        @else
-                            Nome não disponível
-                        @endif
-                    </h2>
-                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-                        <i class="ti ti-x fs-8"></i>
+                        style="flex-direction: column; min-height: 120px;  padding: 10px 24px;"
+                        style="flex-direction: column; min-height: 105px;">
+                        <a href="./index.html" class="text-nowrap logo-img">
+                            <img src="{{ asset('dash/images/logos/logo2.png') }}" width="100" alt="" />
+                        </a>
+                        <h2
+                            style="color: #fff; font-size: 1.50rem; text-align: center; text-transform: capitalize; margin-top: 23px">
+                            Funcionário<br>
+                            @if (isset($func))
+                                {{ $func->nomeFuncionario }}
+                            @else
+                                Nome não disponível
+                            @endif
+                        </h2>
+                        <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                            <i class="ti ti-x fs-8"></i>
+                        </div>
                     </div>
-                </div>
 
                     <!-- Sidebar navigation-->
                     <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
@@ -457,15 +458,6 @@
                                         <i class="ti ti-alert-circle"></i>
                                     </span>
                                     <span class="hide-menu">Minha Agenda</span>
-                                </a>
-                            </li>
-
-                            <li class="sidebar-item">
-                                <a class="sidebar-link" href="{{ route('dashboard.funcionarios.meushorarios') }}">
-                                    <span>
-                                        <i class="ti ti-layout-dashboard"></i>
-                                    </span>
-                                    <span class="hide-menu">Meus Horários</span>
                                 </a>
                             </li>
 
@@ -509,10 +501,10 @@
                             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ asset('assets/img-user/' . $func->fotoFuncionario) }}" alt=""
-                                    width="35" height="35" class="rounded-circle">
-                            </a>
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('assets/img-user/' . $func->fotoFuncionario) }}"
+                                            alt="" width="35" height="35" class="rounded-circle">
+                                    </a>
                                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
                                         aria-labelledby="drop2">
                                         <div class="message-body">
@@ -521,13 +513,13 @@
                                                 <i class="ti ti-user fs-6"></i>
                                                 <p class="mb-0 fs-3">Meu Perfl</p>
 
-                                            <a href="{{ route('dashboard.funcionarios.funcagenda') }}"
-                                                class="d-flex align-items-center gap-2 dropdown-item">
-                                                <i class="ti ti-list-check fs-6"></i>
-                                                <p class="mb-0 fs-3">Meu Compromissos</p>
-                                            </a>
-                                            <a href="{{ route('sair') }}"
-                                                class="btn btn-outline-primary mx-3 mt-2 d-block">Sair</a>
+                                                <a href="{{ route('dashboard.funcionarios.funcagenda') }}"
+                                                    class="d-flex align-items-center gap-2 dropdown-item">
+                                                    <i class="ti ti-list-check fs-6"></i>
+                                                    <p class="mb-0 fs-3">Meu Compromissos</p>
+                                                </a>
+                                                <a href="{{ route('sair') }}"
+                                                    class="btn btn-outline-primary mx-3 mt-2 d-block">Sair</a>
                                         </div>
                                     </div>
                                 </li>
@@ -556,12 +548,6 @@
     }
 </script>
 
-
-
- <!-- JS da Lupa -->
- <script src="{{ asset('dash/js/loupe.js') }}"></script>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('dash/libs/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('dash/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
@@ -571,6 +557,9 @@
 <script src="{{ asset('dash/libs/simplebar/dist/simplebar.js') }}"></script>
 <script src="{{ asset('dash/js/dashboard.js') }}"></script>
 {{-- </body> --}}
+
+<!-- JS da Lupa -->
+<script src="{{ asset('dash/js/lupa.js') }}"></script>
 
 
 </html>

@@ -5,10 +5,6 @@
 @section('conteudo')
 
 
-<div class="content">
-    {{-- DIV PARA A ACESSIBILIDADE --}}
-
-
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('cards/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -270,7 +266,6 @@
                 text-align: center;
             }
 
-
         }
 
         @media (min-width: 701px) and (max-width:1024px) {
@@ -507,444 +502,455 @@
                 flex-wrap: unset;
                 flex-direction: row
             }
+
+            #services {
+                margin-bottom: 0 !important
+            }
+
+            .team {
+                padding: 0 0 15px 0
+            }
         }
     </style>
 
+    <div class="content">
+        {{-- DIV PARA A ACESSIBILIDADE --}}
 
-@section('logo')
-    <a href="/"><img style="width:50%;" class="banner" src="{{ asset('assets/logo4.png') }}" alt="logo"></a>
-@endsection
+    @section('logo')
+        <a href="/"><img style="width:50%;" class="banner" src="{{ asset('assets/logo4.png') }}" alt="logo"></a>
+    @endsection
 
-<div style="" class="hero-wrapper hero-2" id="hero">
-    <div class="global-carousel" id="heroSlider2" data-fade="true" data-slide-show="1" data-lg-slide-show="1"
-        data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="true" data-xl-arrows="true"
-        data-ml-arrows="true">
-        <div class="hero-slider" style="margin-bottom: -8px" style="position: relative;">
+    <div style="" class="hero-wrapper hero-2" id="hero">
+        <div class="global-carousel" id="heroSlider2" data-fade="true" data-slide-show="1" data-lg-slide-show="1"
+            data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="true"
+            data-xl-arrows="true" data-ml-arrows="true">
+            <div class="hero-slider" style="margin-bottom: -8px" style="position: relative;">
 
-            <img class="videoLeFlower" src="{{ asset('assets/banner/floor.jpg') }}" alt="Your Image">
+                <img class="videoLeFlower" src="{{ asset('assets/banner/banner-contato.png') }}" alt="Your Image">
 
-            <!-- Adicione outros elementos acima do vídeo -->
-            <div class="container"
-                style="position: absolute; top: 40%; left: 48%; transform: translate(-50%, -50%); z-index: 2; text-align: center;">
+                <!-- Adicione outros elementos acima do vídeo -->
+                <div class="container"
+                    style="position: absolute; top: 40%; left: 48%; transform: translate(-50%, -50%); z-index: 2; text-align: center;">
 
-                <div style="" class="hero-style2">
-                    <img style="width:70%;" class="logoVideo" src="{{ asset('assets/logo4.png') }}" alt="Logo">
-                    <div>
-                        <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s"
-                            style="font-size: 120px;">SERVIÇOS</h1>
+                    <div style="" class="hero-style2">
+                        <img style="width:70%;" class="logoVideo" src="{{ asset('assets/logo4.png') }}" alt="Logo">
+                        <div>
+                            <h1 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.1s"
+                                style="font-size: 120px;">SERVIÇOS</h1>
+                        </div>
+
                     </div>
 
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-{{-- Cards --}}
-<div id="services" class="services section" data-aos="fade-down" style="margin-bottom: 50px" data-aos-easing="linear"
-    data-aos-duration="500">
-    <div class="container">
-        <div class="row" style=" gap: 20px 0;">
-            <div class="col-lg-3">
-                <div class="service-item first-service">
-                    <div class="iconn"></div>
-                    <h4>Cabelo</h4>
-                    <p>Nossos cortes, cores e tratamentos expressam sua singularidade. Conte a história da sua beleza
-                        através dos fios.</p>
-                    <div class="text-button">
-                        <a href="/servico/cabelo" style="color: #59848e">Saiba mais <i class="fa fa-arrow-right"
-                                style="color: #59848e"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="service-item second-service">
-                    <div class="iconn"></div>
-                    <h4>Depilação</h4>
-                    <p>Experimente a suavidade sem pelos indesejados. Nossos tratamentos oferecem conforto, deixando sua
-                        pele radiante.</p>
-                    <div class="text-button">
-                        <a href="/servico/depilacao" style="color: #59848e">Saiba mais <i class="fa fa-arrow-right"
-                                style="color: #59848e"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="service-item third-service">
-                    <div class="iconn icon-gaby"></div>
-                    <h4>Maquiagem</h4>
-                    <p>Transformamos sua aparência com maquiagem personalizada. Descubra a magia dos pincéis e realce
-                        sua beleza única.</p>
-                    <div class="text-button">
-                        <a href="/servico/maquiagem" style="color: #59848e">Saiba mais <i class="fa fa-arrow-right"
-                                style="color: #59848e"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="service-item fourth-service">
-                    <div class="iconn"></div>
-                    <h4>Unhas</h4>
-                    <p>Transformamos unhas em verdadeiras obras de arte. Dos tons clássicos aos designs ousados, eleve
-                        sua autoestima..</p>
-                    <div class="text-button">
-                        <a href="/servico/unhas" style="color: #59848e">Saiba mais <i class="fa fa-arrow-right"
-                                style="color: #59848e"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="service-item five-service">
-                    <div class="iconn"></div>
-                    <h4>Rosto</h4>
-                    <p>Desfrute de tratamentos faciais que renovam e realçam sua beleza única. No nosso espaço, cada
-                        sessão é uma experiência personalizada para revitalizar a vitalidade da sua pele.</p>
-                    <div class="text-button">
-                        <a href="/servico/rosto" style="color: #59848e">Saiba mais <i class="fa fa-arrow-right"
-                                style="color: #59848e"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="service-item six-service">
-                    <div class="iconn"></div>
-                    <h4>Massagem</h4>
-                    <p>Embarque numa jornada de relaxamento profundo com nossas massagens terapêuticas. Nossa equipe
-                        dedicada oferece momentos de tranquilidade para revitalizar corpo e mente.</p>
-                    <div class="text-button">
-                        <a href="/servico/massagem" style="color: #59848e">Saiba mais <i class="fa fa-arrow-right"
-                                style="color: #59848e"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="service-item seven-service">
-                    <div class="iconn"></div>
-                    <h4>Cilios</h4>
-                    <p>Descubra o luxo de cílios impecáveis. Nossos especialistas oferecem aplicações precisas e
-                        relaxantes, garantindo cílios que realçam sua beleza. Proporcionamos um olhar marcante e
-                        sofisticado.</p>
-                    <div class="text-button">
-                        <a href="/servico/cilio" style="color: #59848e">Saiba mais <i class="fa fa-arrow-right"
-                                style="color: #59848e"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="service-item eigth-service">
-                    <div class="iconn"></div>
-                    <h4>Sobrancelhas</h4>
-                    <p>Destaque seus olhos com sobrancelhas perfeitamente esculpidas. Nossos especialistas criam um arco
-                        que complementa sua expressão, proporcionando definição e poder ao seu olhar.</p>
-                    <div class="text-button">
-                        <a href="/servico/sobrancelha" style="color: #59848e">Saiba mais <i class="fa fa-arrow-right"
-                                style="color: #59848e"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="team">
-    <div class="container">
-        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <h2>Alguns integrantes que fazem parte do time <br>
-                <span style="color: #e4b48d; font-weight: 600;">Le Flower</span>
-            </h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="assets/img/team-1.png" alt="Image">
-                        <div class="team-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text">
-                        <h2>Ana Silva</h2>
-                        <p>Esteticista</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="assets/img/team-2.png" alt="Image">
-                        <div class="team-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text">
-                        <h2>Mariana Santos</h2>
-                        <p>Cabelereira</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="assets/img/team-3.jpg" alt="Image">
-                        <div class="team-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text">
-                        <h2>Camila Oliveira</h2>
-                        <p>Manicure e Pedicure</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="assets/img/team-4.jpg" alt="Image">
-                        <div class="team-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text">
-                        <h2>Kate Glover</h2>
-                        <p>Cabelereira</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--profiles start -->
-<section id="profiles" class="profiles" style="background-color: #fff; ">
-    {{-- data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
-         --}}
-    <div class="profiles-details">
-        <div class="section-heading text-center">
-            <h2>PARCEIROS</h2>
-        </div>
+    {{-- Cards --}}
+    <div id="services" class="services section" data-aos="fade-down" style="margin-bottom: 50px"
+        data-aos-easing="linear" data-aos-duration="500">
         <div class="container">
-            <div class="profiles-content" style="width: 100%">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="single-profile">
-                            <div class="profile-txt">
-                                <img src="../assets/img-gaby/loreal.svg" alt="">
+            <div class="row" style=" gap: 20px 0;">
+                <div class="col-lg-3">
+                    <div class="service-item first-service">
+                        <div class="iconn"></div>
+                        <h4>Cabelo</h4>
+                        <p>Nossos cortes, cores e tratamentos expressam sua singularidade. Conte a história da sua
+                            beleza
+                            através dos fios.</p>
+                        <div class="text-button">
+                            <a href="{{ route('servicoCabelo') }}" style="color: #59848e">Saiba mais <i
+                                    class="fa fa-arrow-right" style="color: #59848e"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-item second-service">
+                        <div class="iconn"></div>
+                        <h4>Depilação</h4>
+                        <p>Experimente a suavidade sem pelos indesejados. Nossos tratamentos oferecem conforto, deixando
+                            sua
+                            pele radiante.</p>
+                        <div class="text-button">
+                            <a href="{{ route('servicoDepilacoes') }}" style="color: #59848e">Saiba mais <i
+                                    class="fa fa-arrow-right" style="color: #59848e"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-item third-service">
+                        <div class="iconn icon-gaby"></div>
+                        <h4>Maquiagem</h4>
+                        <p>Transformamos sua aparência com maquiagem personalizada. Descubra a magia dos pincéis e
+                            realce
+                            sua beleza única.</p>
+                        <div class="text-button">
+                            <a href="{{ route('servicoMaquiagem') }}" style="color: #59848e">Saiba mais <i
+                                    class="fa fa-arrow-right" style="color: #59848e"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-item fourth-service">
+                        <div class="iconn"></div>
+                        <h4>Unhas</h4>
+                        <p>Transformamos unhas em verdadeiras obras de arte. Dos tons clássicos aos designs ousados,
+                            eleve
+                            sua autoestima..</p>
+                        <div class="text-button">
+                            <a href="{{ route('servicoUnhas') }}" style="color: #59848e">Saiba mais <i
+                                    class="fa fa-arrow-right" style="color: #59848e"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="profile-icon-name">Paris</div>
+                <div class="col-lg-3">
+                    <div class="service-item five-service">
+                        <div class="iconn"></div>
+                        <h4>Rosto</h4>
+                        <p>Desfrute de tratamentos faciais que renovam e realçam sua beleza única. No nosso espaço, cada
+                            sessão é uma experiência personalizada para revitalizar a vitalidade da sua pele.</p>
+                        <div class="text-button"> {{ route('servicoRosto') }}
+                            <a href="{{ route('servicoRosto') }}" style="color: #59848e">Saiba mais <i
+                                    class="fa fa-arrow-right" style="color: #59848e"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="service-item six-service">
+                        <div class="iconn"></div>
+                        <h4>Massagem</h4>
+                        <p>Embarque numa jornada de relaxamento profundo com nossas massagens terapêuticas. Nossa equipe
+                            dedicada oferece momentos de tranquilidade para revitalizar corpo e mente.</p>
+                        <div class="text-button">
+                            <a href="{{ route('servicoMassagens') }}" style="color: #59848e">Saiba mais <i
+                                    class="fa fa-arrow-right" style="color: #59848e"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="service-item seven-service">
+                        <div class="iconn"></div>
+                        <h4>Cilios</h4>
+                        <p>Descubra o luxo de cílios impecáveis. Nossos especialistas oferecem aplicações precisas e
+                            relaxantes, garantindo cílios que realçam sua beleza. Proporcionamos um olhar marcante e
+                            sofisticado.</p>
+                        <div class="text-button">
+                            <a href="{{ route('servicoCilios') }}" style="color: #59848e">Saiba mais <i
+                                    class="fa fa-arrow-right" style="color: #59848e"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="service-item eigth-service">
+                        <div class="iconn"></div>
+                        <h4>Sobrancelhas</h4>
+                        <p>Destaque seus olhos com sobrancelhas perfeitamente esculpidas. Nossos especialistas criam um
+                            arco
+                            que complementa sua expressão, proporcionando definição e poder ao seu olhar.</p>
+                        <div class="text-button">
+                            <a href="{{ route('servicoSobrancelhas') }}" style="color: #59848e">Saiba mais <i
+                                    class="fa fa-arrow-right" style="color: #59848e"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="team">
+        <div class="container">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <h2>Alguns integrantes que fazem parte do time <br>
+                    <span style="color: #e4b48d; font-weight: 600;">Le Flower</span>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="assets/img/team-1.png" alt="Image">
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
                             </div>
-                            <div class="single-profile-overlay">
+                        </div>
+                        <div class="team-text">
+                            <h2>Ana Silva</h2>
+                            <p>Esteticista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="assets/img/team-2.png" alt="Image">
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-text">
+                            <h2>Mariana Santos</h2>
+                            <p>Cabelereira</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="assets/img/team-3.jpeg" alt="Image">
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-text">
+                            <h2>Camila Oliveira</h2>
+                            <p>Manicure e Pedicure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="assets/img/team-4.jpeg" alt="Image">
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-text">
+                            <h2>Kate Glover</h2>
+                            <p>Cabelereira</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--profiles start -->
+    <section id="profiles" class="profiles" style="background-color: #fff;">
+        {{-- data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" --}}
+        <div class="profiles-details">
+            <div class="section-heading text-center">
+                <h2>PARCEIROS</h2>
+            </div>
+            <div class="container">
+                <div class="profiles-content" style="width: 100%">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="single-profile">
                                 <div class="profile-txt">
-                                    <img src="../assets/img-gaby/loreal.svg" alt="">
+                                    <img src="{{ asset('assets/img-gaby/loreal.svg') }}" alt="">
+
                                     <div class="profile-icon-name">Paris</div>
+                                </div>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <img src="{{ asset('assets/img-gaby/loreal.svg') }}" alt="">
+                                        <div class="profile-icon-name">Paris</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-profile">
-                            <div class="profile-txt">
-                                <img src="../assets/img-gaby/layer1.svg" alt="">
-                                {{-- <a href=""><i class="flaticon-dribbble"></i></a> --}}
-                                <div class="profile-icon-name">Creme</div>
-                            </div>
-                            <div class="single-profile-overlay">
+                        <div class="col-sm-3">
+                            <div class="single-profile">
                                 <div class="profile-txt">
-                                    <img src="../assets/img-gaby/layer1.svg" alt="">
+                                    <img src="{{ asset('assets/img-gaby/layer1.svg') }}" alt="">
                                     {{-- <a href=""><i class="flaticon-dribbble"></i></a> --}}
                                     <div class="profile-icon-name">Creme</div>
                                 </div>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <img src="{{ asset('assets/img-gaby/layer1.svg') }}" alt="">
+                                        {{-- <a href=""><i class="flaticon-dribbble"></i></a> --}}
+                                        <div class="profile-icon-name">Creme</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-profile">
-                            <div class="profile-txt">
-                                <img src="../assets/img-gaby/sep.svg" alt="">
-                                {{-- <a href=""><i class="flaticon-behance-logo"></i></a> --}}
-                                <div class="profile-icon-name">Beauty</div>
-                            </div>
-                            <div class="single-profile-overlay">
+                        <div class="col-sm-3">
+                            <div class="single-profile">
                                 <div class="profile-txt">
-                                    <img src="../assets/img-gaby/sep.svg" alt="">
+                                    <img src="{{ asset('assets/img-gaby/sep.svg') }}" alt="">
                                     {{-- <a href=""><i class="flaticon-behance-logo"></i></a> --}}
                                     <div class="profile-icon-name">Beauty</div>
                                 </div>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <img src="{{ asset('assets/img-gaby/sep.svg') }}" alt="">
+                                        {{-- <a href=""><i class="flaticon-behance-logo"></i></a> --}}
+                                        <div class="profile-icon-name">Beauty</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-profile profile-no-border">
-                            <div class="profile-txt">
-                                <img src="../assets/img-gaby/labriza.svg" alt="">
-                                {{-- <a href=""><i class="flaticon-github-logo"></i></a> --}}
-                                <div class="profile-icon-name">Comestics</div>
-                            </div>
-                            <div class="single-profile-overlay">
+                        <div class="col-sm-3">
+                            <div class="single-profile profile-no-border">
                                 <div class="profile-txt">
-                                    <img src="../assets/img-gaby/labriza.svg" alt="">
+                                    <img src="{{ asset('assets/img-gaby/labriza.svg') }}" alt="">
                                     {{-- <a href=""><i class="flaticon-github-logo"></i></a> --}}
                                     <div class="profile-icon-name">Comestics</div>
                                 </div>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <img src="{{ asset('assets/img-gaby/labriza.svg') }}" alt="">
+                                        {{-- <a href=""><i class="flaticon-github-logo"></i></a> --}}
+                                        <div class="profile-icon-name">Comestics</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="profile-border"></div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="single-profile">
-                            <div class="profile-txt">
-                                <img src="../assets/img-gaby/group.svg" alt="">
-                                {{-- <a href=""><i class="flaticon-flickr-website-logo-silhouette"></i></a> --}}
-                                <div class="profile-icon-name">Group</div>
-                            </div>
-                            <div class="single-profile-overlay">
+                    <div class="profile-border"></div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="single-profile">
                                 <div class="profile-txt">
-                                    <img src="../assets/img-gaby/group.svg" alt="">
+                                    <img src="{{ asset('assets/img-gaby/group.svg') }}" alt="">
                                     {{-- <a href=""><i class="flaticon-flickr-website-logo-silhouette"></i></a> --}}
                                     <div class="profile-icon-name">Group</div>
                                 </div>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <img src="{{ asset('assets/img-gaby/group.svg') }}" alt="">
+                                        {{-- <a href=""><i class="flaticon-flickr-website-logo-silhouette"></i></a> --}}
+                                        <div class="profile-icon-name">Group</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-profile">
-                            <div class="profile-txt">
-                                <img src="../assets/img-gaby/risque.svg" alt="">
-                                {{-- <a href=""><i class="flaticon-smug"></i></a> --}}
-                                <div class="profile-icon-name">Tá nas suas mãos</div>
-                            </div>
-                            <div class="single-profile-overlay">
+                        <div class="col-sm-3">
+                            <div class="single-profile">
                                 <div class="profile-txt">
-                                    <img src="../assets/img-gaby/risque.svg" alt="">
+                                    <img src="{{ asset('assets/img-gaby/risque.svg') }}" alt="">
                                     {{-- <a href=""><i class="flaticon-smug"></i></a> --}}
                                     <div class="profile-icon-name">Tá nas suas mãos</div>
                                 </div>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <img src="{{ asset('assets/img-gaby/risque.svg') }}" alt="">
+                                        {{-- <a href=""><i class="flaticon-smug"></i></a> --}}
+                                        <div class="profile-icon-name">Tá nas suas mãos</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-profile">
-                            <div class="profile-txt">
-                                <img src="../assets/img-gaby/barba.svg" alt="">
-                                {{-- <a href=""><i class="flaticon-squarespace-logo"></i></a> --}}
-                                <div class="profile-icon-name">Men's beard care products</div>
-                            </div>
-                            <div class="single-profile-overlay">
+                        <div class="col-sm-3">
+                            <div class="single-profile">
                                 <div class="profile-txt">
-                                    <img src="../assets/img-gaby/barba.svg" alt="">
+                                    <img src="{{ asset('assets/img-gaby/barba.svg') }}" alt="">
                                     {{-- <a href=""><i class="flaticon-squarespace-logo"></i></a> --}}
                                     <div class="profile-icon-name">Men's beard care products</div>
                                 </div>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <img src="{{ asset('assets/img-gaby/barba.svg') }}" alt="">
+                                        {{-- <a href=""><i class="flaticon-squarespace-logo"></i></a> --}}
+                                        <div class="profile-icon-name">Men's beard care products</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-profile profile-no-border">
-                            <div class="profile-txt">
-                                <img src="../assets/img-gaby/tangle.svg" alt="">
-
-                                {{-- <a href=""><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a> --}}
-                                <div class="profile-icon-name">Você só precisa da escova certa</div>
-                            </div>
-                            <div class="single-profile-overlay">
+                        <div class="col-sm-3">
+                            <div class="single-profile profile-no-border">
                                 <div class="profile-txt">
-                                    <img src="../assets/img-gaby/tangle.svg" alt="">
+                                    <img src="{{ asset('assets/img-gaby/tangle.svg') }}" alt="">
                                     {{-- <a href=""><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a> --}}
-                                    <div class="profile-icon-name">Você só precisa da escova certa…</div>
+                                    <div class="profile-icon-name">Você só precisa da escova certa</div>
                                 </div>
-                                </>
+                                <div class="single-profile-overlay">
+                                    <div class="profile-txt">
+                                        <img src="{{ asset('assets/img-gaby/tangle.svg') }}" alt="">
+                                        {{-- <a href=""><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a> --}}
+                                        <div class="profile-icon-name">Você só precisa da escova certa…</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-{{-- Teste fonts --}}
-<!--modernizr.min.js-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-<!--bootstrap.min.js-->
-<script src="{{ asset('icon/js/bootstrap.min.js') }}"></script>
-
-<!-- bootsnav js -->
-<script src="{{ asset('icon/js/bootsnav.js') }}"></script>
-
-<!-- jquery.sticky.js -->
-<script src="{{ asset('icon/js/jquery.sticky.js') }}"></script>
-
-<!-- for progress bar start-->
-
-<!-- progressbar js -->
-<script src="{{ asset('icon/js/progressbar.js') }}"></script>
-<!-- appear js -->
+    </section>
 
 
-{{-- Começo scripts gaby --}}
-<!-- DEPENDENCIA jQuery 3.6.0 COontador JORNADA -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- Teste fonts --}}
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
-<script>
-    // Verifica se o dispositivo é responsivo (por exemplo, largura da tela menor que 768 pixels)
-    if (window.innerWidth <= 768) {
-        // Remove a classe "aos-animate" que é usada pelo AOS para animações
-        document.querySelectorAll('.accordion').forEach(function(element) {
-            element.classList.remove('aos-animate');
-        });
-    }
-</script>
+    <!--bootstrap.min.js-->
+    <script src="{{ asset('icon/js/bootstrap.min.js') }}"></script>
 
-<script>
-    $(function() {
-        $('.title').each(function() {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
+    <!-- bootsnav js -->
+    <script src="{{ asset('icon/js/bootsnav.js') }}"></script>
 
-            $({
-                countNum: $this.text()
-            }).animate({
-                countNum: countTo
-            }, {
-                duration: 8000,
-                easing: 'linear',
-                step: function() {
-                    $this.text('+' + Math.floor(this.countNum) + ' unidades');
-                },
-                complete: function() {
-                    $this.text('+' + this.countNum + ' unidades');
-                    //alert('finished');
-                }
+    <!-- jquery.sticky.js -->
+    <script src="{{ asset('icon/js/jquery.sticky.js') }}"></script>
+
+    <!-- for progress bar start-->
+
+    <!-- progressbar js -->
+    <script src="{{ asset('icon/js/progressbar.js') }}"></script>
+    <!-- appear js -->
+
+
+    {{-- Começo scripts gaby --}}
+    <!-- DEPENDENCIA jQuery 3.6.0 COontador JORNADA -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Verifica se o dispositivo é responsivo (por exemplo, largura da tela menor que 768 pixels)
+        if (window.innerWidth <= 768) {
+            // Remove a classe "aos-animate" que é usada pelo AOS para animações
+            document.querySelectorAll('.accordion').forEach(function(element) {
+                element.classList.remove('aos-animate');
+            });
+        }
+    </script>
+
+    <script>
+        $(function() {
+            $('.title').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                }, {
+                    duration: 8000,
+                    easing: 'linear',
+                    step: function() {
+                        $this.text('+' + Math.floor(this.countNum) + ' unidades');
+                    },
+                    complete: function() {
+                        $this.text('+' + this.countNum + ' unidades');
+                        //alert('finished');
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
-
-{{-- acs --}}
 </div>
 
-@component('components.loupe') @endcomponent
+
+@component('components.loupe')
+@endcomponent
 
 @endsection

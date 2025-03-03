@@ -8726,7 +8726,7 @@ h1, h2, h3, h4, h5,
       .carde-body ul li span:nth-child(2) {
         width: 30%; }
       .carde-body ul li span:last-child {
-        width: 14%; }
+        font: 15px; }
 
         @media (max-width: 700px) {
             .carde-body ul li span:last-child {

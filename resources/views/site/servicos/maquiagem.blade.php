@@ -114,7 +114,7 @@
         <div class="linha justify-content-center mb-5 pb-3">
             <div class="otaria heading-section ftco-animate text-center">
                 <h3 class="subheading">Serviços</h3>
-                <h2 class="mb-1">Para Maquiagem</h2>
+                <h2 class="mb-1">Maquiagem</h2>
             </div>
         </div>
         <div class="linha align-items-center">
