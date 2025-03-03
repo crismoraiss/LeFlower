@@ -15,7 +15,7 @@ A plataforma conta com uma <strong>página web institucional</strong>, além de 
 
 <h2>✨ Funcionalidades </h2>
 <ul>
-  <li><strong>📌 Página Web Institucional:</strong> Apresenta a história do salão os <strong>serviços oferecidos e informações de <strong>contato.</li><br>
+  <li><strong>📌 Página Web Institucional:</strong> Apresenta a história do salão os serviços oferecidos e informações de contato.</li><br>
       
   <li><strong>🛒 Dashboard do Cliente:</strong> Permite que os clientes realizem agendamentos de serviços de forma prática e rápida.</li><br>
   
