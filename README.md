@@ -23,7 +23,7 @@ A plataforma conta com uma <strong>página web institucional</strong>, além de 
   
   <li><strong>👩‍🔧 Dashboard do Funcionário:</strong> Cada profissional pode visualizar seus agendamentos e horários disponíveis.</li><br>
   
-  <li><strong>🔍 Lupa de Acessibilidade:</strong> Implementada em <strong>todo o site para facilitar a leitura e melhorar a experiência do usuário. Atualmente, está em desenvolvimento para aprimorar sua usabilidade e oferecer uma melhor acessibilidade.</li>
+  <li><strong>🔍 Lupa de Acessibilidade:</strong> Implementada em todo o site para facilitar a leitura e melhorar a experiência do usuário. Atualmente, está em desenvolvimento para aprimorar sua usabilidade e oferecer uma melhor acessibilidade.</li>
 </ul>
 
 ---
